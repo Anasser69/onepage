@@ -1,20 +1,43 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import {
+  View,
+  ImageBackground,
+  StyleSheet,
+  SafeAreaView,
+  StatusBar,
+} from "react-native";
+import Header from "./src/Header";
+import Footer from "./src/Footer";
+import Body from "./src/Body";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ImageBackground
+      source={require("./assets/Display.png")}
+      style={styles.imagebackground}
+    >
+      <SafeAreaView style={styles.container}>
+        <Header />
+        <Body style={styles.body} />
+        <Footer />
+      </SafeAreaView>
+    </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
+  imagebackground: {
+    flex: 1,
+    resizeMode: "cover",
+    backgroundColor: "rgba(19, 21, 20, 1)",
+  },
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: "space-between",
+    marginTop: StatusBar.currentHeight || 0,
+    // Distribute space evenly between header and footer
+  },
+  body: {
+    flex: 1, // Ensure that body takes up remaining space between header and footer
   },
 });
