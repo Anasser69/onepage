@@ -34,7 +34,9 @@ const Top = () => {
       </View>
       <View style={styles.gap} />
       <View style={styles.textView2}>
-        <Image source={require("../../assets/Body/userprof.png")} />
+        <View style={styles.toptop}>
+          <Text style={styles.userprof}>Saad14</Text>
+        </View>
         <View style={styles.second}>
           <View style={styles.imgright}>
             <View style={styles.imgContainer}>
@@ -132,9 +134,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    gap: 10, 
-    width: 70, 
-    height: 20, 
+    gap: 10,
+    width: 70,
+    height: 20,
     borderRadius: 12,
     backgroundColor: "#4D5666",
     shadowColor: "rgba(0, 0, 0, 0.25)",
@@ -146,9 +148,9 @@ const styles = StyleSheet.create({
     shadowRadius: 5.2,
     elevation: 2,
     marginBottom: 4,
-    paddingHorizontal: 10, 
-    paddingVertical: 4, 
-    marginVertical: 4, 
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    marginVertical: 4,
   },
 
   imgIcon: {
@@ -157,7 +159,7 @@ const styles = StyleSheet.create({
     resizeMode: "contain",
   },
   imgmiddle: {
-    flexDirection: "column", 
+    flexDirection: "column",
     flex: 1,
     justifyContent: "center",
     marginLeft: 25,
@@ -186,13 +188,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
     width: 93,
     height: 93,
-    borderRadius: 93 / 2, 
+    borderRadius: 93 / 2,
     overflow: "hidden",
   },
   began: {
     position: "absolute",
-    bottom: 10, 
-    alignSelf: "center", 
+    bottom: 10,
+    alignSelf: "center",
     width: 100.15,
     height: 21.46,
     borderRadius: 5.72,
@@ -202,13 +204,13 @@ const styles = StyleSheet.create({
     paddingRight: 35,
   },
   subb: {
-    width: "auto", 
-    height: "auto", 
-    paddingVertical: 4, 
-    paddingHorizontal: 10, 
-    marginVertical: 4, 
-    marginHorizontal: 10, 
-    borderRadius: 8, 
+    width: "auto",
+    height: "auto",
+    paddingVertical: 4,
+    paddingHorizontal: 10,
+    marginVertical: 4,
+    marginHorizontal: 10,
+    borderRadius: 8,
     backgroundColor: "rgba(239, 176, 84, 1)",
     alignItems: "center",
     justifyContent: "center",
@@ -222,6 +224,33 @@ const styles = StyleSheet.create({
     letterSpacing: 0.5,
     textAlign: "center",
     // backgroundColor: "rgba(255, 255, 255, 1)",
+  },
+  userprof: {
+    width: 50,
+    // height: 6,
+    // position: "absolute",
+    top: 1,
+    // left: 23,
+    // gap: 0,
+    // fontFamily: "Almarai",
+    fontSize: 8,
+    fontWeight: "700",
+    lineHeight: 11,
+    // letterSpacing: 0.15000000596046448,
+    marginLeft: 22,
+    // textAlign: "left",
+  },
+  toptop: {
+    width: 75,
+    height: 18,
+    gap: 0,
+    borderTopLeftRadius: 0,
+    borderTopRightRadius: 0,
+    borderBottomLeftRadius: 8,
+    borderBottomRightRadius: 8,
+    // opacity: 0,
+    backgroundColor: "rgba(38, 43, 51, 1)",
+    boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
   },
 });
 
