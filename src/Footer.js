@@ -5,36 +5,51 @@ const Footer = () => {
   return (
     <View style={styles.container}>
       <View style={styles.gridContainer}>
-        <TouchableOpacity>
-          <Image
-            source={require("../assets/Footer/store.png")}
-            style={styles.gridItem}
-          />
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <Image
-            source={require("../assets/Footer/commu.png")}
-            style={styles.gridItem}
-          />
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <Image
-            source={require("../assets/Footer/main.png")}
-            style={styles.gridItem}
-          />
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <Image
-            source={require("../assets/Footer/legue.png")}
-            style={styles.gridItem}
-          />
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <Image
-            source={require("../assets/Footer/chat.png")}
-            style={styles.gridItem}
-          />
-        </TouchableOpacity>
+        <View style={styles.gridItemContainer}>
+          <TouchableOpacity>
+            <Image
+              source={require("../assets/Footer/store.png")}
+              style={styles.gridItem}
+            />
+          </TouchableOpacity>
+          <Text style={styles.gridText}>المتجر</Text>
+        </View>
+        <View style={styles.gridItemContainer}>
+          <TouchableOpacity>
+            <Image
+              source={require("../assets/Footer/commu.png")}
+              style={styles.gridItem}
+            />
+          </TouchableOpacity>
+          <Text style={styles.gridText}>المجتمع</Text>
+        </View>
+        <View style={styles.gridItemContainer}>
+          <TouchableOpacity>
+            <Image
+              source={require("../assets/Footer/main.png")}
+              style={styles.gridItem}
+            />
+          </TouchableOpacity>
+          <Text style={styles.gridText}>الرئيسيه</Text>
+        </View>
+        <View style={styles.gridItemContainer}>
+          <TouchableOpacity>
+            <Image
+              source={require("../assets/Footer/legue.png")}
+              style={styles.gridItem}
+            />
+          </TouchableOpacity>
+          <Text style={styles.gridText}>الدوريات</Text>
+        </View>
+        <View style={styles.gridItemContainer}>
+          <TouchableOpacity>
+            <Image
+              source={require("../assets/Footer/chat.png")}
+              style={styles.gridItem}
+            />
+          </TouchableOpacity>
+          <Text style={styles.gridText}>الدردشة</Text>
+        </View>
       </View>
     </View>
   );
@@ -48,8 +63,8 @@ const styles = StyleSheet.create({
     height: 105,
     alignItems: "center",
     justifyContent: "center",
-    borderTopLeftRadius: 24, // Updated border radius for the top
-    borderTopRightRadius: 24, // Updated border radius for the top
+    borderTopLeftRadius: 24,
+    borderTopRightRadius: 24,
     borderBottomLeftRadius: 0,
     borderBottomRightRadius: 0,
   },
@@ -62,5 +77,14 @@ const styles = StyleSheet.create({
     width: 70,
     height: 70,
     resizeMode: "contain",
+  },
+  gridText: {
+    marginTop: -5,
+    color: "white",
+    fontSize: 12,
+    textAlign: "center", 
+  },
+  gridItemContainer: {
+    alignItems: "center",
   },
 });
