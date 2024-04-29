@@ -6,7 +6,7 @@ const Footer = () => {
     <View style={styles.container}>
       <View style={styles.gridContainer}>
         <View style={styles.gridItemContainer}>
-          <TouchableOpacity>
+          <TouchableOpacity style={styles.imglol}>
             <Image
               source={require("../assets/Footer/store.png")}
               style={styles.gridItem}
@@ -15,7 +15,7 @@ const Footer = () => {
           <Text style={styles.gridText}>المتجر</Text>
         </View>
         <View style={styles.gridItemContainer}>
-          <TouchableOpacity>
+          <TouchableOpacity style={styles.imglol}>
             <Image
               source={require("../assets/Footer/commu.png")}
               style={styles.gridItem}
@@ -24,7 +24,7 @@ const Footer = () => {
           <Text style={styles.gridText}>المجتمع</Text>
         </View>
         <View style={styles.gridItemContainer}>
-          <TouchableOpacity>
+          <TouchableOpacity style={styles.imglol}>
             <Image
               source={require("../assets/Footer/main.png")}
               style={styles.gridItem}
@@ -33,7 +33,7 @@ const Footer = () => {
           <Text style={styles.gridText}>الرئيسيه</Text>
         </View>
         <View style={styles.gridItemContainer}>
-          <TouchableOpacity>
+          <TouchableOpacity style={styles.imglol}>
             <Image
               source={require("../assets/Footer/legue.png")}
               style={styles.gridItem}
@@ -42,7 +42,7 @@ const Footer = () => {
           <Text style={styles.gridText}>الدوريات</Text>
         </View>
         <View style={styles.gridItemContainer}>
-          <TouchableOpacity>
+          <TouchableOpacity style={styles.imglol}>
             <Image
               source={require("../assets/Footer/chat.png")}
               style={styles.gridItem}
@@ -77,6 +77,7 @@ const styles = StyleSheet.create({
     width: 70,
     height: 70,
     resizeMode: "contain",
+    
   },
   gridText: {
     marginTop: -5,
