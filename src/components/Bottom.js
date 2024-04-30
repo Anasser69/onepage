@@ -4,29 +4,17 @@ import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 const Bottom = () => {
   return (
     <View style={styles.container}>
-      <TouchableOpacity>
-        <Image
-          source={require("../../assets/Body/play.png")}
-          style={styles.image}
-        ></Image>
+      <TouchableOpacity style={styles.text1}>
+        <Text style={styles.text11}> العب الان</Text>
       </TouchableOpacity>
-      <TouchableOpacity>
-        <Image
-          source={require("../../assets/Body/demo.png")}
-          style={styles.image}
-        ></Image>
+      <TouchableOpacity style={styles.text2}>
+        <Text style={styles.text22}> لعبة ودية</Text>
       </TouchableOpacity>
-      <TouchableOpacity>
-        <Image
-          source={require("../../assets/Body/session.png")}
-          style={styles.image}
-        ></Image>
+      <TouchableOpacity style={styles.text2}>
+        <Text style={styles.text22}>انشاء جلسة</Text>
       </TouchableOpacity>
-      <TouchableOpacity>
-        <Image
-          source={require("../../assets/Body/list.png")}
-          style={styles.image}
-        ></Image>
+      <TouchableOpacity style={styles.text2}>
+        <Text style={styles.text22}> قائمة الجلسات</Text>
       </TouchableOpacity>
     </View>
   );
@@ -35,15 +23,53 @@ const Bottom = () => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "rgba(38, 43, 51, 0.4)",
-    height: 330, 
-    borderRadius: 16, 
-    padding: 24, 
-    paddingHorizontal: 8, 
-    gap: 1,
-    justifyContent: "center", 
+    height: 330,
+    borderRadius: 16,
+    padding: 24,
+    paddingHorizontal: 8,
+    gap: 25,
+    justifyContent: "center",
     alignItems: "center",
   },
-
+  text1: {
+    width: 300,
+    height: 56,
+    paddingVertical: 8,
+    paddingHorizontal: 0,
+    marginVertical: 0,
+    marginHorizontal: 0,
+    borderRadius: 8,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "rgba(239, 176, 84, 1)",
+    elevation: 5,
+  },
+  text2: {
+    width: 300,
+    height: 40,
+    paddingVertical: 8,
+    paddingHorizontal: 0,
+    marginVertical: 0,
+    marginHorizontal: 0,
+    borderRadius: 8,
+    backgroundColor: "rgba(77, 86, 102, 1)",
+    shadowColor: "rgba(253, 245, 233, 0.1)",
+    shadowOffset: {
+      width: 4,
+      height: 4,
+    },
+    shadowOpacity: 0.5,
+    shadowRadius: 11.6,
+    elevation: 5, 
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  text11: {
+    color: " rgba(253, 245, 233, 1)"
+  },
+  text22: {
+    color: "rgba(242, 190, 114, 1)",
+  },
 });
 
 export default Bottom;
