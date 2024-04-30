@@ -25,6 +25,10 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "fonts":{
+      "Almarai":"/assets/Fonts/Almarai-Regular.ttf",
+      "Almarai-Bold":"/assets/Fonts/Almarai-Bold.ttf"
     }
   }
 }

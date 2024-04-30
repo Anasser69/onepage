@@ -1,7 +1,15 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
+import { useFonts } from "expo-font";
 
 const Footer = () => {
+   const [fontsLoaded] = useFonts({
+    //  Almaria: require("../../assets/Fonts/Almarai-Regular.ttf"),
+     "Almarai-Bold": require("../assets/Fonts/Almarai-Bold.ttf"),
+   });
+   if (!fontsLoaded) {
+     return null; // or a loading indicator
+   }
   return (
     <View style={styles.container}>
       <View style={styles.gridContainer}>
@@ -77,13 +85,13 @@ const styles = StyleSheet.create({
     width: 70,
     height: 70,
     resizeMode: "contain",
-    
   },
   gridText: {
     marginTop: -5,
     color: "white",
     fontSize: 12,
-    textAlign: "center", 
+    textAlign: "center",
+    fontFamily: "Almarai-Bold",
   },
   gridItemContainer: {
     alignItems: "center",

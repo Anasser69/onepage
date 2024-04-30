@@ -1,7 +1,16 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
+import { useFonts } from "expo-font";
 
 const Bottom = () => {
+  const [fontsLoaded] = useFonts({
+    "Almaria": require("../../assets/Fonts/Almarai-Regular.ttf"),
+    "Almarai-Bold": require("../../assets/Fonts/Almarai-Bold.ttf"),
+  });
+    if (!fontsLoaded) {
+      return null; // or a loading indicator
+    }
+
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.text1}>
@@ -60,15 +69,17 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.5,
     shadowRadius: 11.6,
-    elevation: 5, 
+    elevation: 5,
     alignItems: "center",
     justifyContent: "center",
   },
   text11: {
-    color: " rgba(253, 245, 233, 1)"
+    color: " rgba(253, 245, 233, 1)",
+    fontFamily: "Almarai-Bold",
   },
   text22: {
     color: "rgba(242, 190, 114, 1)",
+    fontFamily: "Almarai-Bold",
   },
 });
 

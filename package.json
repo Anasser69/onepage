@@ -9,6 +9,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@expo-google-fonts/almarai": "^0.2.3",
     "@expo/vector-icons": "^14.0.0",
     "expo": "~50.0.14",
     "expo-image-picker": "^14.7.1",

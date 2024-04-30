@@ -1,6 +1,7 @@
 import React ,{ useState } from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import * as ImagePicker from "expo-image-picker";
+import { useFonts } from "expo-font";
 
 
 
@@ -21,6 +22,14 @@ const Top = () => {
     }
   };
 
+   const [fontsLoaded] = useFonts({
+     Almaria: require("../../assets/Fonts/Almarai-Regular.ttf"),
+     "Almarai-Bold": require("../../assets/Fonts/Almarai-Bold.ttf"),
+   });
+   if (!fontsLoaded) {
+     return null; // or a loading indicator
+   }
+
   return (
     <View style={styles.container}>
       <View style={styles.textView1}>
@@ -28,7 +37,7 @@ const Top = () => {
           <Text style={styles.sub}>اشترك الان</Text>
         </TouchableOpacity>
         <View style={styles.textContainer}>
-          <Text> انت غير مشترك ! </Text>
+          <Text style={styles.textunsub}> انت غير مشترك ! </Text>
           <Image source={require("../../assets/Body/alert.png")} />
         </View>
       </View>
@@ -182,6 +191,7 @@ const styles = StyleSheet.create({
     // gap: 0,
     // opacity: 0,
     // backgroundColor: "rgba(255, 255, 255, 1)",
+    color:"white"
   },
   eagle: {
     flexDirection: "column",
@@ -198,10 +208,13 @@ const styles = StyleSheet.create({
     width: 100.15,
     height: 21.46,
     borderRadius: 5.72,
-    paddingHorizontal: 14.31,
+    // paddingHorizontal: 14.31,
     backgroundColor: "rgba(57, 64, 77, 1)",
     zIndex: 1,
-    paddingRight: 35,
+    paddingRight: 40,
+    fontFamily: "Almarai-Bold",
+    color: "white",
+    fontSize: 8.58,
   },
   subb: {
     width: "auto",
@@ -210,7 +223,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     marginVertical: 4,
     marginHorizontal: 10,
-    borderRadius: 8,
+    // borderRadius: 8,
     backgroundColor: "rgba(239, 176, 84, 1)",
     alignItems: "center",
     justifyContent: "center",
@@ -223,6 +236,8 @@ const styles = StyleSheet.create({
     lineHeight: 16,
     letterSpacing: 0.5,
     textAlign: "center",
+    fontFamily: "Almarai-Bold",
+    color: "white",
     // backgroundColor: "rgba(255, 255, 255, 1)",
   },
   userprof: {
@@ -238,7 +253,9 @@ const styles = StyleSheet.create({
     lineHeight: 11,
     // letterSpacing: 0.15000000596046448,
     marginLeft: 22,
+    fontFamily: "Almarai-Bold",
     // textAlign: "left",
+    color:"white"
   },
   toptop: {
     width: 75,
@@ -251,6 +268,10 @@ const styles = StyleSheet.create({
     // opacity: 0,
     backgroundColor: "rgba(38, 43, 51, 1)",
     boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
+  },
+  textunsub: {
+    fontFamily: "Almarai-Bold",
+    color:"white"
   },
 });
 
